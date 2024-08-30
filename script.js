@@ -17,6 +17,22 @@ function addProduction() {
   );
 
   updateProductList();
+
+  let productString = "";
+  let obj = {};
+  obj.type = productType;
+  obj.name = productName;
+  obj.count = productCount;
+  products.push(obj);
+  console.log(obj);
+  products.forEach((e) => {
+    productString += `<div class="product-item" >
+   Тип:${e.type}
+   Название:${e.name}
+   Количество:${e.count}
+   <button class="delete" onclick={btnClick(${i})}>Удалить</button>
+   </div>`;
+  });
 }
 
 let clearList = document.getElementsByClassName("clear-list")[0];
