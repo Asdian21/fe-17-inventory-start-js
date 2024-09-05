@@ -13,7 +13,7 @@ function addProduction() {
   let productCountValue = productCount.value;
 
   products.push(
-    `${productTypeValue}: ${productNameValue} - ${productCountValue} штук`
+    `${productTypeValue}: ${productNameValue} - ${productCountValue} шт.`
   );
 
   updateProductList();
